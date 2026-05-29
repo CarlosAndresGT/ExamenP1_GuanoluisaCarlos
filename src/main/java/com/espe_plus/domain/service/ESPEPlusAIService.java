@@ -1,0 +1,12 @@
+package com.espe_plus.domain.service;
+import dev.langchain4j.service.UserMessage;
+import dev.langchain4j.service.spring.AiService;
+import dev.langchain4j.service.V;
+@AiService
+public interface ESPEPlusAIService {
+    @UserMessage("""
+            Genera un saludo de bienvenida a la plataforma de Gestion de Peliculas {{platform}}
+            Usa menos de 120 caracteres
+            """)
+    String generateGreeting(@V("platform") String platform);
+}
