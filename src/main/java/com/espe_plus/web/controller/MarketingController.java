@@ -18,6 +18,6 @@ public class MarketingController {
     public String generarPublicidad(
             @RequestParam("tema") String tema,
             @RequestParam("audiencia") String audiencia) {
-        return aiService.generateGreeting(tema,audiencia);
+        return aiService.generarAnuncio(tema, audiencia);
     }
 }

@@ -11,5 +11,5 @@ public interface EduSmartAIService {
             Redacta una frase publicitaria de máximo 100 caracteres para vender un curso de
             {{tema}} dirigido a {{audiencia}}.
             """)
-    String generateGreeting(@V("platform") String platform);
+    String generarAnuncio(@V("tema") String tema, @V("audiencia") String audiencia);
 }
